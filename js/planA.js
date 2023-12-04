@@ -13,10 +13,6 @@ const els = {
   textInputEl: document.querySelector('#text'),
   idSelectorEl: document.querySelector('#userId'),
   formBody: document.getElementById('formListiner'),
-  emailInputEl: document.querySelector('#email'),
-  cityInputEl: document.querySelector('#city'),
-  streetInputEl: document.querySelector('#street'),
-  houseNrInputEl: document.querySelector('#house-number'),
 };
 
 els.formBody.addEventListener('submit', (event) => {
@@ -27,25 +23,11 @@ els.formBody.addEventListener('submit', (event) => {
   console.log('textVal ===', textVal);
   const idVal = els.idSelectorEl.value;
   console.log('idVal ===', idVal);
-  const emailEl = els.emailInputEl.value;
-  console.log('emailEl ===', emailEl);
-  const cityVal = els.cityInputEl.value;
-  console.log('cityVal ===', cityVal);
-  const streetVal = els.streetInputEl.value;
-  console.log('streetVal ===', streetVal);
-  const houseNrVal = els.houseNrInputEl.value;
-  console.log('houseNrVal ===', houseNrVal);
 
   const newPost = {
     title: titleVal,
     body: textVal,
     userId: idVal,
-    email: emailEl,
-    address: {
-      city: cityVal,
-      street: streetVal,
-      houseNumber: houseNrVal,
-    },
   };
 
   createNewPost(newPost);
