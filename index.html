@@ -4,10 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="/js/fetchPost.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
+    />
+    <!-- <script src="/js/fetchPost.js" defer></script> -->
+    <script src="/js/create.js" defer></script>
   </head>
   <body>
     <h1>Fetch post</h1>
+
+    <form id="formListiner">
+      <input type="text" name="title" id="title" placeholder="Title" />
+      <input type="text" name="text" id="text" placeholder="text" />
+      <select name="userId" id="userId">
+        <option selected disabled value="Select id">Select id</option>
+        <option value="22">22</option>
+        <option value="33">33</option>
+        <option value="44">44</option>
+        <option value="55">55</option>
+        <option value="66">66</option>
+      </select>
+      <br />
+      <button type="submit">Submit Form</button>
+    </form>
 
     <button id="btn1">Post</button>
   </body>

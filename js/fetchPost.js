@@ -3,6 +3,10 @@ console.log('fetchPost.js file was loaded');
 
 const els = {
   createBtn: document.querySelector('#btn1'),
+  titleInputEl: document.querySelector('#title'),
+  textInputEl: document.querySelector('#text'),
+  idSelectorEl: document.querySelector('#userId'),
+  formBody: document.getElementById('formListiner'),
 };
 // console.log('els ===', els);
 
@@ -15,11 +19,10 @@ const newPost = {
 };
 
 // issiusti newPost migtuko paspaudimu su fetch
-
 els.createBtn.addEventListener('click', createNewPost);
 
 function createNewPost() {
-  console.log('creating');
+  console.log('creatingNewPost');
   fetch(url, {
     method: 'POST',
     headers: {
